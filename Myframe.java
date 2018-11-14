@@ -11,12 +11,22 @@ public class Myframe extends JFrame
        setLocationRelativeTo(null);
        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        setVisible(true);
+       
+       
+       
     }
-    private MyPanel panel;
+    
+    public void paintLine()
+    {
+        panel = new LineDemoPanel();
+        add(panel);
+        setVisible(true); 
+    }
+    private static MyPanel panel;
     public static void main(String[] args)
     {
        Myframe frame = new Myframe("Hello");
-
+       frame.paintLine();
     }
 
 }
