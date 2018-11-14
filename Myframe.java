@@ -22,11 +22,21 @@ public class Myframe extends JFrame
         add(panel);
         setVisible(true); 
     }
+    
+    public void paintRectangle()
+    {
+        panel = new RectangleDemoPanel();
+        add(panel);
+        setVisible(true); 
+    }
     private static MyPanel panel;
     public static void main(String[] args)
     {
-       Myframe frame = new Myframe("Hello");
+       Myframe frame = new Myframe("Line");
        frame.paintLine();
+       
+       Myframe frame1 = new Myframe("Rectangle");
+       frame1.paintRectangle();
     }
 
 }
